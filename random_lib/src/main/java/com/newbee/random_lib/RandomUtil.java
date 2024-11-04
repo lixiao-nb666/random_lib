@@ -38,7 +38,7 @@ public class RandomUtil {
     }
 
 
-    //输入长度获取对应的数字
+    //输入长度获取对应长度的数字
     public long getRandomLongByLength(int length){
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < length; i++){
@@ -50,7 +50,7 @@ public class RandomUtil {
 
 
 
-
+    //输入长度获取对应长度的字符串
     public String getRandomString(int length) { // length表示生成字符串的长度
         String base = "abcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder sb = new StringBuilder();
@@ -61,6 +61,7 @@ public class RandomUtil {
         return sb.toString();
     }
 
+    //输入长度获取对应的数字，并且在该字符串最前面加个指定字符串
     public String getRandomStringTitleAddStr(String str,int length) { // length表示生成字符串的长度
         String base = "abcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder sb = new StringBuilder();
@@ -72,6 +73,7 @@ public class RandomUtil {
         return sb.toString();
     }
 
+    //获取指定长度的对应字符串，随机字符使用自己输入的字符串
     public String getRandomStringUseCustomString(int length, String str) { // length表示生成字符串的长度
         if(TextUtils.isEmpty(str)){
             return "";
@@ -84,6 +86,7 @@ public class RandomUtil {
         return sb.toString();
     }
 
+    //获取指定长度的对应字符串，随机字符使用自己输入的字符组
     public String getRandomStringUseCustomStrings(int length,String... strs){
         if(null==strs||strs.length==0){
             return "";
@@ -99,6 +102,7 @@ public class RandomUtil {
 
 
 
+    //获取指定长度的对应字符串，随机字符使用自己输入的字符组，并且在2个字符之前加个间隔的字符串
     public String getRandomStringUseCustomStringsAddBwStr(int length,String bwStr,String... strs){
         if(null==strs||strs.length==0){
             return "";
